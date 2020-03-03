@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Layout, Row, Col } from "antd";
+import SlideLayout from "./components/slide";
+import Videolayout from "./components/video";
+import "antd/dist/antd.css";
+const { Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Content>
+        <Row>
+          <Col lg={12} xs={24}>
+            <Videolayout />
+          </Col>
+          <Col lg={12} xs={24}>
+            <SlideLayout />
+          </Col>
+        </Row>
+      </Content>
+    </Layout>
   );
 }
 
